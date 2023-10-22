@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content">
+      <form class="arrow-btn" id="left-btn" action="/prevInfo" method="post">
+        <button class="btn"><</button>
+      </form>
+  
+    <div id="poke-details">
+  
+      <h4 id="poke-name"><%=n.charAt(0).toUpperCase() + n.slice(1);%></h4>
+      <img id="poke-img" src=<%=img%>>
+  
+      <div class="characteristics-box">
+        <div class="title">
+          <p>Type</p>
+        </div>
+        <div class="content">
+          <%for(const t in types){%>
+            <p><%=types[t]%></p>
+            <%}%>
+        </div>
+      </div>
+  
+      <div class="characteristics-box">
+        <div class="title">
+          <p>Base XP</p>
+        </div>
+        <div class="content"><p><%=exp%></p></div>
+      </div>
+  
+      <div class="characteristics-box">
+        <div class="title"><p>Weight</p></div>
+        <div class="content"><p><%=weight%></p></div>
+      </div>
+  
+      <div class="characteristics-box">
+        <div class="title"><p id="title">Height</p></div>
+        <div class="content"><p><%=height%></p></div>
+      </div>
+
+      <div class="characteristics-box">
+        <div class="title"><p>Moves</p></div>
+        <div id="moves-content">
+          <div class="scrollable-div">
+            <%for(const m in moves){%>
+                <p scope="row"><%=moves[m].charAt(0).toUpperCase() + moves[m].slice(1);%></p>
+            <%}%>
+          </div>
+        </div>
+      </div>
+
+      <div class="characteristics-box">
+        <div class="title">
+          <p>Abilities</p>
+        </div>
+        <div class="content">
+          <%for(const a in abil){%>
+            <p ><%=abil[a].charAt(0).toUpperCase() + abil[a].slice(1);%></p>
+          <%}%>
+        </div>
+      </div>
+
+      <form class="" action="/back" method="post">
+        <button class="btn">Search Other Pokemon</button>
+      </form>
+  
+    </div>
+
+    <form class="arrow-btn" id="right-btn" action="/nextInfo" method="post">
+      <button class="btn">></button>
+    </form>
+  
+  </div>
+  </div>
+
+  
+
+</body>

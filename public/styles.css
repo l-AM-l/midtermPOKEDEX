@@ -1,0 +1,145 @@
+:root {
+  --primary: #141E46;
+  --secondary: #800b0b;
+  --secondary2: #FF6969;
+  --contrast: rgb(175, 175, 39);
+  --btns: #FFF5E0;
+  --pokeball-red: rgb(186, 22, 22);
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(62, 62, 62);
+}
+#search-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  border-radius: 20px;
+  background-color: var(--primary);
+}
+/* Poke ball */
+#poke-ball{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(var(--pokeball-red) 40%, rgb(88, 88, 88) 40%, rgb(88, 88, 88) 60%, var(--pokeball-red) 60%);
+  border-radius: 50%;
+  border: solid black 10px;
+  width: 500px;
+  height: 500px;
+}
+#poke-ball form{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+#poke-ball input{
+  border: 0;
+  border-radius: 10px;
+  margin: 5px;
+}
+#poke-ball button{
+  margin: 5px;
+}
+#current-poke{
+  display: flex;
+  flex-direction: row;
+}
+#info-btn{
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Poke details */
+
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#poke-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  padding: 20px;
+  background-color: var(--primary);
+  border-radius: 20px;
+  border: solid black 15px;
+}
+#poke-name{
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+#poke-img{
+  width: 50%;
+  border-radius: 100%;
+  border: solid var(--contrast) 5px;
+  background-color: #e4e4e4;
+}
+.characteristics-box{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid var(--contrast) 2px;
+  width: 50%;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: var(--secondary);
+}
+.characteristics-box .title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+.characteristics-box .content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  border-radius: 20px;
+}
+.characteristics-box p{
+  margin: 10px;
+}
+.characteristics-box #moves-content{
+  width: 90%;
+}
+.arrow-btn button{
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: var(--btns);
+}
+.btn{
+  background-color: var(--btns);
+  border: 0;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  background-color: #8d8d8da4;
+  transition: all 0.2s ease-in;
+}
+.scrollable-div{
+  overflow-y: auto;
+  height: 200px;
+  text-align: center;
+}

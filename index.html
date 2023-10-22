@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="search-content">
+
+    <form class="arrow-btn" action="/prev" method="post">
+      <button class="btn" id="prev-btn"><</button>
+    </form>
+
+    <div id="poke-ball">
+
+      <h2 id="top-msg" name="currentName"><%=msg%></h2>
+  
+      <form action="/search" method="post">
+        <input id="search-bar" type="text" name="searchName" placeholder="Pokemon's Name">
+        <button class="btn" id="search-btn" type="submit">Search</button>
+      </form>
+
+      <div id="current-poke">
+        <form action="/info" method="post">
+          <% if (PokeID !== 0) { %>
+            <button class="btn" id="info-btn">See <b><%= PokeName %></b>  Info</button>
+          <% } %>
+        </form>
+      </div>
+
+      
+      
+  
+    </div>
+  
+              
+    <form class="arrow-btn" action="/next" method="post">
+      <button class="btn" id="next-btn">></button>
+    </form>
+
+
+  </div>  
+      
+</body>
+</html>
