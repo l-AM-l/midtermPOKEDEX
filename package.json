@@ -15,6 +15,9 @@
   "node": "^17.0.1",
   
     
+  "nodemon": "^3.0.1",
+  
+    
   "pokedex-promise-v2": "^3.3.2"
   
   }

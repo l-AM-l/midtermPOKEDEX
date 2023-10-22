@@ -1,6 +1,6 @@
 const express = require("express");
 const Pokedex = require("pokedex-promise-v2");
-var P = new Pokedex();
+var Poke = new Pokedex();
 const app = express();
 app.use(express.static("public"));
 app.use(express.json());
@@ -12,7 +12,7 @@ let pokeID = 1;
 let pokeName = '';
 
 app.get("/",(req,res) => {
-    P.getPokemonByName(pokeID)
+    Poke.getPokemonByName(pokeID)
     .then(function(response) {
       pokeName = response.name;
       pokeID = response.id;
@@ -26,7 +26,7 @@ app.get("/",(req,res) => {
 });
 app.post("/search",(req,res) => {
     const currentSearch = req.body.searchName;
-    P.getPokemonByName(currentSearch.toLowerCase())
+    Poke.getPokemonByName(currentSearch.toLowerCase())
     .then(function(response) {
         pokeID = response.id;
         res.redirect("/");
@@ -75,7 +75,7 @@ app.post("/back",(req,res) => {
 });
 
 app.get("/info",(req,res) => {
-    P.getPokemonByName(pokeID)
+    Poke.getPokemonByName(pokeID)
     .then(function(response) {
       n = response.name;
       exp = response.base_experience;
@@ -105,7 +105,7 @@ app.get("/info",(req,res) => {
 });
 
 app.post("/info",(req,res) => {
-    P.getPokemonByName(pokeID)
+    Poke.getPokemonByName(pokeID)
     .then(function(response) {
       n = response.name;
       exp = response.base_experience;
